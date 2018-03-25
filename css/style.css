@@ -56,29 +56,64 @@
 }
 
 @keyframes bounce {
-  from {transform: translateY(-2000px);}
-  70% {transform: translateY(30px);}
-  90% {transform: translateY(-10px);}
-  to {transform: translateY(0);}
+  from {
+    transform: translateY(-2000px);
+  }
+  70% {
+    transform: translateY(30px);
+  }
+  90% {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(0);
+  }
 }
 
 @keyframes shake {
-  from {transform: translateX(0px);}
-  10%,30%,50%,70%,90% {transform: translateX(-10px);}
-  20%,40%,60%,80% {transform: translateX(10px);}
-  to {transform: translateX(0);}
+  from {
+    transform: translateX(0px);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 @keyframes left {
-  from {transform: translateX(3000px);}
-  70% {transform: translateX(-30px);}
-  90% {transform: translateX(10px);}
-  to {transform: translateX(0px);}
+  from {
+    transform: translateX(3000px);
+  }
+  70% {
+    transform: translateX(-30px);
+  }
+  90% {
+    transform: translateX(10px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 @keyframes slide {
-  from {opacity: .4;}
-  to {opacity: 1;}
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .slide {
@@ -701,31 +736,34 @@ header {
 }
 
 .main-offer-slider {
+  position: relative;
+
   float: left;
   overflow: hidden;
+
   width: 620px;
-  position: relative;
   margin-right: 20px;
 }
 
 .slider-items {
-   transition: transform .8s ease;
-   width: 200%;
+  width: 200%;
+
+  transition: transform .8s ease;
 }
 
-.slider-drill-control:checked~.slider-items {
+.slider-drill-control:checked ~ .slider-items {
   transform: translate(0);
 }
 
-.slider-perforator-control:checked~.slider-items {
+.slider-perforator-control:checked ~ .slider-items {
   transform: translate(-620px);
 }
 
 .slider__item {
   float: left;
+
   width: 595px;
   height: 243px;
-  
   padding: 23px 0 0 25px;
 
   color: #fff;
@@ -769,9 +807,10 @@ header {
 
   width: 195px;
   height: 17px;
+  margin-top: 121px;
   padding-top: 11px;
   padding-bottom: 10px;
-  margin-top: 121px;
+
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -789,29 +828,36 @@ header {
 
 .main-offer-slider label {
   display: block;
+
   cursor: pointer;
 }
 
 .main-offer-slider label::after {
-  display: block;
-  position: absolute;
+  font-family: 'symbols-technomart';
   font-size: 40px;
   line-height: 40px;
+
+  position: absolute;
   z-index: 20;
-  font-family: 'symbols-technomart';
   top: 115px;
+
+  display: block;
+
   cursor: pointer;
+
   color: #fff;
 }
 
 .main-offer-slider label.right-control::after {
-  content: "\3e";
   right: 20px;
+
+  content: '\3e';
 }
 
 .main-offer-slider label.left-control::after {
-  content: "\3c";
   left: 20px;
+
+  content: '\3c';
 }
 
 .main-offer-slider label:hover::after {
@@ -820,15 +866,18 @@ header {
 
 .main-offer-slider label::before {
   position: absolute;
-  content: "";
-  width: 5px;
   z-index: 20;
-  height: 5px;
   bottom: 35px;
   left: 49%;
-  background-color: #fff;
+
+  width: 5px;
+  height: 5px;
+
+  content: '';
+
   border: 2px solid #fff;
   border-radius: 50%;
+  background-color: #fff;
 }
 
 .main-offer-slider label.right-control::before {
@@ -1546,10 +1595,12 @@ header {
   position: absolute;
   top: -27px;
   right: 0;
+
   width: 10px;
   height: 272px;
-  content: "";
-  
+
+  content: '';
+
   background: url(../img/vert-divider.png);
 }
 
@@ -1586,15 +1637,18 @@ header {
 }
 
 .advantages-right-column {
-  float: left;
   position: relative;
+
+  float: left;
 }
 
 .advantages-right-column section {
   position: relative;
+
   display: none;
+
   width: 280px;
-  min-height: 200px;
+  min-height: 180px;
   padding-top: 5px;
   padding-right: 340px;
 }
@@ -1630,6 +1684,7 @@ header {
 
 .advantege-btn {
   float: left;
+
   width: 195px;
 }
 
@@ -1933,19 +1988,22 @@ footer .footer-logo {
 .popup {
   font-family: 'Cuprum', sans-serif;
   font-size: 18px;
+
   position: fixed;
   top: 50%;
   left: 50%;
-	width: 620px;
+
+  width: 620px;
   margin-top: -225px;
   margin-left: -310px;
   padding-top: 48px;
 
+  animation-name: bounce;
+  animation-duration: .6s;
+
   border-top: 7px solid #ee3643;
   background-color: #fff;
   box-shadow: 0 10px 25px rgba(41,52,73,.5);
-  animation-name: bounce;
-  animation-duration: 0.6s;
 }
 
 .write-us .feedback {
@@ -2042,6 +2100,7 @@ footer .footer-logo {
   position: absolute;
   top: 5px;
   right: 5px;
+
   display: block;
 
   width: 20px;
@@ -2099,15 +2158,18 @@ footer .footer-logo {
 }
 
 .map {
-  animation: left 0.6s;
   position: fixed;
-  width: 80%;
-  height: 70%;
   top: 15%;
   left: 10%;
+
+  width: 80%;
+  height: 70%;
+
+  animation: left .6s;
+
   border: 5px solid #fff;
-  box-shadow: 0 10px 25px rgba(41,52,73,.5);
   background-image: url(../img/map-big.jpg);
+  box-shadow: 0 10px 25px rgba(41,52,73,.5);
 }
 
 .popup-error {
